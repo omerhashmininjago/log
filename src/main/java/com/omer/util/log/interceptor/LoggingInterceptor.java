@@ -15,6 +15,24 @@ import java.util.concurrent.TimeUnit;
 
 import static java.lang.String.format;
 
+/**
+ * <p>
+ * The {@link LoggingInterceptor} would need to be applied
+ * on methods or classes, where the execution time needs to
+ * be captured
+ * </p>
+ * <p>
+ * This will be done by annotating the candidate class
+ * or method using {@link LogExecTime}
+ * </p>
+ * <p>
+ * {@link LogExecTime} would take in a variable which would
+ * determine at what level the log needs to be captured
+ * </p>
+ * <p>
+ * By default the execution time would be logged at INFO level
+ * </p>
+ */
 @Component
 public class LoggingInterceptor {
 
@@ -50,10 +68,12 @@ public class LoggingInterceptor {
     }
 
     @Pointcut("within(com..*)")
-    public void classLevelInspection() { }
+    public void classLevelInspection() {
+    }
 
     @Pointcut("@annotation(com.omer.util.log.domain.LogExecTime)")
-    public void methodLevelInspection() { }
+    public void methodLevelInspection() {
+    }
 
     private Object methodProfilingForLogging(ProceedingJoinPoint proceedingJoinPoint, LogExecTime.LogLevel logLevel) {
         Stopwatch stopWatch = null;
@@ -81,6 +101,7 @@ public class LoggingInterceptor {
         }
         return returnValue;
     }
+
     @FunctionalInterface
     protected interface LoggingFunction<String> {
 
