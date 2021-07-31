@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.omer.util</groupId>
-    <artifactId>omer-log</artifactId>
+    <groupId>io.github.omerhashmininjago</groupId>
+    <artifactId>log</artifactId>
     <version>0.0.1</version>
     <packaging>jar</packaging>
 
@@ -14,8 +14,8 @@
     <url>https://github.com/omerhashmininjago/</url>
 
     <scm>
-        <url>https://github.com/omerhashmininjago/omer-log.git</url>
-        <connection>git@github.com:omerhashmininjago/omer-log.git</connection>
+        <url>https://github.com/omerhashmininjago/log.git</url>
+        <connection>git@github.com:omerhashmininjago/log.git</connection>
     </scm>
 
     <developers>
