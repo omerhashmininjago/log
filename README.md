@@ -1,4 +1,4 @@
-# omer-log
+# log
 
 This library contains an annotation which can be used to track the execution time of a method
 
