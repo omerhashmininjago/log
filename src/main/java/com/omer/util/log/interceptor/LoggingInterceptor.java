@@ -57,12 +57,12 @@ public class LoggingInterceptor {
             .build();
 
 
-    @Around("classLevelInspection() && @within(logExectTime))")
+    @Around("classLevelInspection() && @within(logExecTime))")
     public Object classesAnnotatedWithLog(ProceedingJoinPoint proceedingJoinPoint, LogExecTime.LogLevel logLevel) {
         return methodProfilingForLogging(proceedingJoinPoint, logLevel);
     }
 
-    @Around("methodLevelInspection() && @within(logExectTime))")
+    @Around("methodLevelInspection() && @within(logExecTime))")
     public Object publicMethodAnnotatedWith(ProceedingJoinPoint proceedingJoinPoint, LogExecTime.LogLevel logLevel) {
         return methodProfilingForLogging(proceedingJoinPoint, logLevel);
     }
