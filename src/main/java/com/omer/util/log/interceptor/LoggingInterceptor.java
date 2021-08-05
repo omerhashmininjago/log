@@ -67,7 +67,7 @@ public class LoggingInterceptor {
         return methodProfilingForLogging(proceedingJoinPoint, logLevel);
     }
 
-    @Pointcut("within(com..*)")
+    @Pointcut("within(..*)")
     public void classLevelInspection() {
     }
 
